@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.container{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.box{
+    background-color: burlywood;
+    text-align: center;
+    padding: 5px  solid black;
+    border-radius: 20px;
+    padding: 50px 100px;
+}
+h2{
+    text-align: center;
+}
+textarea{
+    height: 150px;
+    width: 250px;
+    
+}
+button{
+    background-color: pink;
+    height: 50px;
+    width: 260px;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.03);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Count value</h2>
+            <textarea name="inputtext" id="textinput" placeholder="inputtext"></textarea>
+            <p>Character Count : <span id="count">0</span></p>
+        </div>    
+    </div>
+    <script>
+        let inputtext = document.getElementById('textinput');
+        let count = document.getElementById('count');
+        inputtext.addEventListener('input', () => {
+            count.textContent = inputtext.value.length;
+        })
+    </script>
+
+</body>
+</html>
